@@ -1,4 +1,5 @@
-﻿using InfoPill.Application.UseCases.Pill.Register;
+﻿using InfoPill.Application.UseCases.Pill.GetAll;
+using InfoPill.Application.UseCases.Pill.Register;
 using InfoPill.Application.UseCases.Pill.Update;
 using InfoPill.Communication.Requests;
 using InfoPill.Communication.Responses;
@@ -30,6 +31,21 @@ namespace InfoPill.API.Controllers
             var useCase = new UpdatePillUseCase();
             useCase.Execute(id, request);
 
+            return NoContent();
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(ResponseAllPillJson), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public IActionResult GetAll()
+        {
+            var useCase = new GetAllPillsUseCase();
+            var response = useCase.Execute();
+            
+            if (response.Pills.Any())
+            {
+                return Ok(response);
+            }
             return NoContent();
         }
     }
