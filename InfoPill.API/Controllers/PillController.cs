@@ -1,4 +1,5 @@
 ﻿using InfoPill.Application.UseCases.Pill.GetAll;
+using InfoPill.Application.UseCases.Pill.GetPillByIdUseCase;
 using InfoPill.Application.UseCases.Pill.Register;
 using InfoPill.Application.UseCases.Pill.Update;
 using InfoPill.Communication.Requests;
@@ -47,6 +48,18 @@ namespace InfoPill.API.Controllers
                 return Ok(response);
             }
             return NoContent();
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        [ProducesResponseType(typeof(ResponsePillJson), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
+        public IActionResult Get([FromRoute] int id)
+        {
+            var useCase = new GetPillByIdUseCase();
+            var response = useCase.Execute(id);
+
+            return Ok(response);
         }
     }
 }
