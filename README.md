@@ -23,7 +23,7 @@ A proposta inicial é criar um MVP com backend em **.NET** e frontend em **Next.
         
 - **Frontend:**
     
-    - Next.js
+    - Angular
         
 - **Outros:**
     
