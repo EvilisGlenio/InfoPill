@@ -75,7 +75,7 @@ InfoPill/
 1. Clone o repositório:
     
     ```bash
-    git clone https://github.com/seu-usuario/infopill.git
+    git clone https://github.com/EvilisGlenio/infopill.git
     ```
 
 ---
