@@ -38,11 +38,20 @@ A proposta inicial é criar um MVP com backend em **.NET** e frontend em **Next.
 
 ## 📂 Estrutura do Projeto
 
-bash
-
-CopiarEditar
-
-`InfoPill/ ├── src/ │   ├── InfoPill.API │   ├── InfoPill.Application │   ├── InfoPill.Communication │   ├── InfoPill.Domain │   ├── InfoPill.Infrastructure │   ├── InfoPill.Exception ├── tests/ │   └── (futuros testes de unidade e integração) ├── README.md └── InfoPill.sln`
+```bash
+InfoPill/
+├── src/
+│   ├── InfoPill.API
+│   ├── InfoPill.Application
+│   ├── InfoPill.Communication
+│   ├── InfoPill.Domain
+│   ├── InfoPill.Infrastructure
+│   ├── InfoPill.Exception
+├── tests/
+│   └── (futuros testes de unidade e integração)
+├── README.md
+└── InfoPill.sln
+```
 
 ---
 
