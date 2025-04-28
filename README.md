@@ -74,28 +74,9 @@ InfoPill/
 
 1. Clone o repositório:
     
-    bash
-    
-    CopiarEditar
-    
-    `git clone https://github.com/seu-usuario/infopill.git`
-    
-2. Navegue até a pasta `src/InfoPill.API` e execute:
-    
-    bash
-    
-    CopiarEditar
-    
-    `dotnet run`
-    
-3. Acesse a API pelo navegador:
-    
-    bash
-    
-    CopiarEditar
-    
-    `https://localhost:5001/swagger`
-    
+    ```bash
+    git clone https://github.com/seu-usuario/infopill.git
+    ```
 
 ---
 
